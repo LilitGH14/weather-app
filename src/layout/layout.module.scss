@@ -1,0 +1,14 @@
+@import "../assets/scss/variables.scss";
+
+.layout_wrapper {
+  padding: 1rem;
+  background-color: #1b1e31;
+  height: calc(100vh - 2rem);
+  width: calc(100vw - 2rem);
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .layout_wrapper {
+    height: 100%;
+  }
+}

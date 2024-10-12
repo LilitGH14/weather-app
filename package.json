@@ -1,0 +1,74 @@
+{
+  "homepage": "https://lilitgh14.github.io/weather-app",
+  "name": "weather-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.2.8",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.113",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "axios": "^1.7.7",
+    "eslint-plugin-perfectionist": "^3.8.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "gh-pages": "^6.2.0",
+    "google-map-react": "^2.2.1",
+    "node-jq": "^6.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-redux": "^9.1.2",
+    "react-scripts": "5.0.1",
+    "react-svg": "^16.1.34",
+    "redux-persist": "^6.0.0",
+    "rxjs": "^7.8.1",
+    "sass": "^1.79.4",
+    "simple-react-modal": "^0.5.1",
+    "sort-imports": "^1.1.0",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -f"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/google-map-react": "^2.1.10",
+    "@types/node-sass": "^4.11.7",
+    "@typescript-eslint/eslint-plugin": "^8.8.1",
+    "@typescript-eslint/parser": "^8.8.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.1",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "prettier": "^3.3.3",
+    "webpack": "^5.95.0"
+  }
+}

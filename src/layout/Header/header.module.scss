@@ -1,0 +1,63 @@
+@import "../../assets/scss/variables.scss";
+
+.header_wrapper {
+  background-color: #424769;
+  padding: 12px;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+}
+
+.logo_container {
+  margin: 0 40px 0 20px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.search_container {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .header_wrapper {
+    max-width: unset;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+  }
+
+  .logo_container {
+    margin: 0 auto 1rem;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .search_container {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+
+  .searchBar_wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .search_icon {
+    top: 0;
+  }
+}
