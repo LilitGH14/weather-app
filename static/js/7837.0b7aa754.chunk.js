@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[7837],{7837:(e,a,p)=>{e.exports=p.p+"static/media/wi-day-haze.acbeaedc6bfec528dba1.svg"}}]);

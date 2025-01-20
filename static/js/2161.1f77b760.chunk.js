@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[2161],{2161:(e,a,p)=>{e.exports=p.p+"static/media/wi-day-sprinkle.4957077a30980798dd2e.svg"}}]);

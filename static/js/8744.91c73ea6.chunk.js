@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[8744],{8744:(e,a,p)=>{e.exports=p.p+"static/media/wi-meteor.767888eb56532a4e8679.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[6464],{6464:(e,a,p)=>{e.exports=p.p+"static/media/wi-moon-alt-waxing-crescent-1.14175ce82353872f3d7c.svg"}}]);

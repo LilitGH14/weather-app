@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[1906],{1906:(e,a,t)=>{e.exports=t.p+"static/media/wi-night-thunderstorm.81db1abb31d63f14e94a.svg"}}]);

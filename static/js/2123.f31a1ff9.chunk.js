@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[2123],{2123:(e,a,p)=>{e.exports=p.p+"static/media/wi-horizon-alt.4923d276e615373dff25.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[1736],{1736:(a,e,s)=>{a.exports=s.p+"static/media/wi-small-craft-advisory.5c00c3d3878789bcafe8.svg"}}]);

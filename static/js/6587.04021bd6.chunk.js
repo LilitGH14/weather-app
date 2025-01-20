@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[6587],{6587:(e,p,a)=>{e.exports=a.p+"static/media/wi-cloud-up.7d64c0071be196b62021.svg"}}]);

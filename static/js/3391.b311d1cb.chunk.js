@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[3391],{3391:(e,p,s)=>{e.exports=s.p+"static/media/wi-solar-eclipse.447e711845841cb4b76d.svg"}}]);

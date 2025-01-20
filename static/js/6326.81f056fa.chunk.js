@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[6326],{6326:(e,a,s)=>{e.exports=s.p+"static/media/wi-day-sunny-overcast.db7b549b099ea04dfc3b.svg"}}]);

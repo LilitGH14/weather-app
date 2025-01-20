@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[3611],{3611:(a,e,p)=>{a.exports=p.p+"static/media/wi-moon-alt-waning-gibbous-4.8f94c6f81b2aa91a23db.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[3804],{3804:(e,a,p)=>{e.exports=p.p+"static/media/wi-moonrise.58ac37eb82494c18537b.svg"}}]);

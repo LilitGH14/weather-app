@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[9290],{9290:(e,a,s)=>{e.exports=s.p+"static/media/wi-sunset.44275c39ad3e558fdac1.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[4389],{4389:(e,a,p)=>{e.exports=p.p+"static/media/wi-hurricane.2b05500d93e27ea9283b.svg"}}]);

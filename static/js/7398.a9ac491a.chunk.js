@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[7398],{7398:(a,e,p)=>{a.exports=p.p+"static/media/wi-train.0df3f4a5d59096bb870a.svg"}}]);

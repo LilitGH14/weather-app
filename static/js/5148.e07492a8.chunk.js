@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[5148],{5148:(e,a,p)=>{e.exports=p.p+"static/media/wi-day-sleet.6475a3e0b5a7503d822f.svg"}}]);

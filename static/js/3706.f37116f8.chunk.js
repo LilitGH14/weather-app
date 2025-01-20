@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[3706],{3706:(e,p,a)=>{e.exports=a.p+"static/media/wi-direction-up-right.eb0356a302208fe56267.svg"}}]);

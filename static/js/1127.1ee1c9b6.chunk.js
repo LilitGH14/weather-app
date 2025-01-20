@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[1127],{1127:(e,a,p)=>{e.exports=p.p+"static/media/wi-earthquake.12c174dd20cb49e0a22a.svg"}}]);

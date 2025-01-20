@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[876],{876:(e,p,a)=>{e.exports=a.p+"static/media/wi-lunar-eclipse.85606fbf230473df9116.svg"}}]);

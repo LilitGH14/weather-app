@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[6830],{6830:(e,t,a)=>{e.exports=a.p+"static/media/wi-thermometer-internal.86b9b3f8b2b2ed1d1574.svg"}}]);

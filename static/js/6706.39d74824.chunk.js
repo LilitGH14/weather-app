@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[6706],{6706:(e,a,p)=>{e.exports=p.p+"static/media/wi-night-partly-cloudy.fa23e8f2ff7827970a15.svg"}}]);

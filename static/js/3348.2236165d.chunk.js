@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[3348],{3348:(e,a,p)=>{e.exports=p.p+"static/media/wi-flood.d94a510be9ca1eef4a3a.svg"}}]);

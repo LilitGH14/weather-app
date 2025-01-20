@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[9983],{9983:(e,a,p)=>{e.exports=p.p+"static/media/wi-night-alt-snow-wind.dfab9bf19bb8f05469ce.svg"}}]);

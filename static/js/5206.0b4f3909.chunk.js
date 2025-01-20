@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[5206],{5206:(e,a,p)=>{e.exports=p.p+"static/media/wi-moon-new.b0e31748765ccbaad835.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[8702],{8702:(a,e,p)=>{a.exports=p.p+"static/media/wi-volcano.db983a0922633a90aa73.svg"}}]);

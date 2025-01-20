@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[5550],{5550:(e,a,p)=>{e.exports=p.p+"static/media/wi-smog.1ee26eaa7763405390e1.svg"}}]);

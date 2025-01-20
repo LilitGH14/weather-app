@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[7778],{7778:(e,a,p)=>{e.exports=p.p+"static/media/wi-fahrenheit.c7c55cb7d62254e577db.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[777],{777:(e,p,a)=>{e.exports=a.p+"static/media/wi-horizon.20eb61025be37951c23d.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[1644],{1644:(e,s,a)=>{e.exports=a.p+"static/media/wi-day-cloudy-gusts.f486bd3204ce6927b31c.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[5297],{5297:(e,a,p)=>{e.exports=p.p+"static/media/wi-time-5.f56f9ad813a4745a1e63.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[9214],{9214:(e,a,p)=>{e.exports=p.p+"static/media/wi-day-windy.f35b731c95e727b1052c.svg"}}]);

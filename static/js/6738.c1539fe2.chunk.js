@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[6738],{6738:(e,a,p)=>{e.exports=p.p+"static/media/wi-hail.f9552791eeaf3cf9b233.svg"}}]);

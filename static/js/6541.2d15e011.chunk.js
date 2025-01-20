@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[6541],{6541:(e,a,p)=>{e.exports=p.p+"static/media/wi-moon-waning-crescent-4.8e17b5f2c4ae8eb1e587.svg"}}]);

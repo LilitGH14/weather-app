@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[3205],{3205:(e,a,p)=>{e.exports=p.p+"static/media/wi-day-fog.64823203fe2824cd23a7.svg"}}]);

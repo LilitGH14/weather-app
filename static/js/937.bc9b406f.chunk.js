@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[937],{937:(e,a,p)=>{e.exports=p.p+"static/media/wi-thunderstorm.989e9cae9a9800e23f85.svg"}}]);

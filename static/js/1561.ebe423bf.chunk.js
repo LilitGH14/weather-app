@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[1561],{1561:(e,a,p)=>{e.exports=p.p+"static/media/wi-moon-waxing-gibbous-6.5a48eab804c82f3ed21e.svg"}}]);

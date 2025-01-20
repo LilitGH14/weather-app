@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[5532],{5532:(e,a,p)=>{e.exports=p.p+"static/media/wi-strong-wind.fd74a4dde8275263486e.svg"}}]);

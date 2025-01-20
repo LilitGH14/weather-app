@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[2941],{2941:(e,a,c)=>{e.exports=c.p+"static/media/wi-night-alt-cloudy-windy.dc8f95044c7ae631cfc5.svg"}}]);

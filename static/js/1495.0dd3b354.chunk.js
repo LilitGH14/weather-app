@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[1495],{1495:(e,p,a)=>{e.exports=a.p+"static/media/wi-humidity.4810ceffb1d8565f36bc.svg"}}]);
