@@ -1,12 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import { useDispatch } from "react-redux";
 
 import CurrentWeather from "../../components/core/currentWeather/CurrentWeather";
-import {
-  getCoordinatesFromCity,
-  getCurrentWeather,
-  getWeatherForecast,
-} from "../../services/weatherService";
 import Forecast from "../../components/core/forecast/Forecast";
 import { convertForecastData } from "../../helpers/forecastUtils";
 import { useAppSelector } from "../../redux/hooks";
@@ -20,6 +15,11 @@ import {
   setSearchFilterValue,
 } from "../../redux/slices/weatherSlice";
 
+import {
+  getCoordinatesFromCity,
+  getCurrentWeather,
+  getWeatherForecast,
+} from "../../services/weatherService";
 import styles from "./header.module.scss";
 
 const Home = () => {
@@ -28,107 +28,115 @@ const Home = () => {
   const { searchFilterValue, currentCity, forecast, currentWeather, cache } =
     useAppSelector((state) => state.general);
 
-  const setCachedData = (city: string) => {
-    dispatch(setCurrentWeather(cache[city].currentWeather));
-    dispatch(setForecast(cache[city].forecast));
-    dispatch(setCity(city));
-  };
+  const setCachedData = useCallback(
+    (city: string) => {
+      const cached = cache[city];
+      if (cached) {
+        dispatch(setCurrentWeather(cached.currentWeather));
+        dispatch(setForecast(cached.forecast));
+        dispatch(setCity(city));
+      }
+    },
+    [cache, dispatch]
+  );
 
-  const getData = (position: any) => {
-    dispatch(setLoading(true));
+  const fetchWeatherData = useCallback(
+    (latitude: number, longitude: number) => {
+      dispatch(setLoading(true));
 
-    Promise.all([
-      getCurrentWeather(position.coords.latitude, position.coords.longitude),
-      getWeatherForecast(position.coords.latitude, position.coords.longitude),
-    ])
-      .then(([res1, res2]) => {
-        dispatch(setCurrentWeather(res1?.current_weather));
-        dispatch(setForecast(convertForecastData(res2)));
+      Promise.all([
+        getCurrentWeather(latitude, longitude),
+        getWeatherForecast(latitude, longitude),
+      ])
+        .then(([currentWeatherData, forecastData]) => {
+          const forecast = convertForecastData(forecastData);
 
-        let _city = res2.timezone
-          .split("/")
-          [res2.timezone.split("/").length - 1].toLowerCase();
+          dispatch(setCurrentWeather(currentWeatherData?.current_weather));
+          dispatch(setForecast(forecast));
 
-        dispatch(setCity(_city));
+          const city =
+            forecastData.timezone.split("/").pop()?.toLowerCase() || "";
 
-        dispatch(
-          setCacheData({
-            city: _city,
-            forecast: convertForecastData(res2),
-            currentWeather: res1?.current_weather,
-            coords: [res1.latitude, res1.longitude],
-          })
-        );
-      })
-      .catch((err: any) => dispatch(setError(err)))
-      .finally(() => {
-        setTimeout(() => {
-          dispatch(setLoading(false));
-        }, 2000);
+          dispatch(setCity(city));
+          dispatch(
+            setCacheData({
+              city,
+              forecast,
+              currentWeather: currentWeatherData?.current_weather,
+              coords: [latitude, longitude],
+            })
+          );
+        })
+        .catch((err) => dispatch(setError(err)))
+        .finally(() => dispatch(setLoading(false)));
+    },
+    [dispatch]
+  );
+
+  const handleGeolocationSuccess = useCallback(
+    (position: GeolocationPosition) => {
+      const { latitude, longitude } = position.coords;
+
+      const cachedCity = Object.entries(cache).find(([_, data]) => {
+        const [cachedLat, cachedLon] = (data as any).coords;
+        return cachedLat === latitude && cachedLon === longitude;
       });
-  };
 
-  //get client current position
+      if (cachedCity) {
+        setCachedData(cachedCity[0]);
+      } else {
+        fetchWeatherData(latitude, longitude);
+      }
+    },
+    [cache, fetchWeatherData, setCachedData]
+  );
+
+  const handleGeolocationError = useCallback(() => {
+    const fallbackLatitude =
+      (process.env.REACT_APP_YEREVAN_LATITUDE &&
+        +process.env.REACT_APP_YEREVAN_LATITUDE) ||
+      40.1792;
+    const fallbackLongitude =
+      (process.env.REACT_APP_YEREVAN_LONGITUDE &&
+        +process.env.REACT_APP_YEREVAN_LONGITUDE) ||
+      44.4991;
+
+    fetchWeatherData(fallbackLatitude, fallbackLongitude);
+  }, [fetchWeatherData]);
+
+  const handleSearchFilter = useCallback(() => {
+    if (searchFilterValue && !cache[searchFilterValue]) {
+      getCoordinatesFromCity(searchFilterValue)
+        .then(({ lat, lng }) => {
+          dispatch(setSearchFilterValue(""));
+          fetchWeatherData(lat, lng);
+        })
+        .catch((err) => dispatch(setError(err)))
+        .finally(() => dispatch(setLoading(false)));
+    } else {
+      setCachedData(searchFilterValue.toLowerCase());
+    }
+  }, [searchFilterValue, cache, dispatch, fetchWeatherData, setCachedData]);
+
   useEffect(() => {
     if (!currentWeather) {
       if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(
-          (position) => {
-            let coordsArr = Object.values(cache).map((m: any) => m.coords);
-
-            if (coordsArr.length > 0) {
-              for (let i = 0; i < coordsArr.length; i++) {
-                if (
-                  position.coords.latitude === coordsArr[i][0] &&
-                  position.coords.longitude === coordsArr[i][1]
-                ) {
-                  setCachedData(cache[i]);
-                } else {
-                  getData(position);
-                }
-              }
-            }
-          },
-          (error) => {
-            getData({
-              coords: {
-                latitude: process.env.REACT_APP_YEREVAN_LATITUDE,
-                longitude: process.env.REACT_APP_YEREVAN_LONGITUDE,
-              },
-            });
-          }
+          handleGeolocationSuccess,
+          handleGeolocationError
         );
       } else {
-        getData({
-          coords: {
-            latitude: process.env.REACT_APP_YEREVAN_LATITUDE,
-            longitude: process.env.REACT_APP_YEREVAN_LONGITUDE,
-          },
-        });
+        handleGeolocationError();
       }
     }
-  }, [cache, currentWeather]);
+  }, [currentWeather, handleGeolocationSuccess, handleGeolocationError]);
 
-  //get data while search filter is used
   useEffect(() => {
     if (searchFilterValue) {
-      if (cache[searchFilterValue]) {
-        setCachedData(searchFilterValue.toLowerCase());
-      } else {
-        getCoordinatesFromCity(searchFilterValue)
-          .then((res) => {
-            dispatch(setSearchFilterValue(""));
-            getData({ coords: { latitude: res.lat, longitude: res.lng } });
-          })
-          .catch((err: any) => dispatch(setError(err)))
-          .finally(() => {
-            setTimeout(() => {
-              dispatch(setLoading(false));
-            }, 2000);
-          });
-      }
+      dispatch(setLoading(true));
+      handleSearchFilter();
     }
-  }, [searchFilterValue, cache]);
+  }, [searchFilterValue, handleSearchFilter, dispatch]);
 
   return (
     <div className={styles.home_wrapper}>
